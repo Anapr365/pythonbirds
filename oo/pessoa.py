@@ -7,6 +7,7 @@ class Pessoa:
         return f'Ola {id(self)}'
 
 
+
 if __name__ == '__main__':
     Ana = Pessoa(nome='Ana')
     Paula = Pessoa(Ana, nome= 'paula')
@@ -16,6 +17,9 @@ if __name__ == '__main__':
     print(Paula.nome)
     print(Paula.idade)
     for filho in  Paula.filhos:
-        print(filhos.nome)
-    print(Paula.filhos)
+        print(filho.nome)
+    Paula.sobrenome = 'Rosa'
+    del Paula.filhos
+    print(Paula.__dict__)
+    print(Ana.__dict__)
 
